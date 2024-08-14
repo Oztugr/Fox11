@@ -1,19 +1,40 @@
 /* ############# Required files ############## */
 /* coment/uncoment  to enable/disable*/
 
-/* @import url('components/mica_support.css'); */ /* Deprecate in Firefox 117  */
-/* @import url('components/hide_alltabs_button.css'); */
+
+ @import url('components/hide_alltabs_button.css'); 
 @import url('components/autohide_bookmarks_and_main_toolbars.css');
 @import url('components/urlbar_centered_text.css');
-@import url('components/round_caption_buttons.css');
+/* @import url('components/round_caption_buttons.css');  */
 @import url('components/toolbars.css');
-@import url('components/vivaldifox.css');
-/* @import url('components/adaptative_tab_bar_color.css'); */
+/*@import url('components/adaptative_tab_bar_color.css'); */
+@import url("icons/icons.css");
 
 
 /* ############# Personal Settings ############## */
-#navigator-toolbox{--uc-autohide-toolbar-delay: 100ms; /* The toolbar is hidden after 0.1s */}
+#navigator-toolbox{--uc-autohide-toolbar-delay: 1000ms; /* The toolbar is hidden after 1s */}
 :root{   
    --general-border-radius: 8px !important;
    --auto-general-color: var(--lwt-accent-color) !important;
 }
+
+
+
+
+
+
+
+/*  Cool animation on tab/bookmark icons  */
+.tabbrowser-tab:not([pinned]):not([selected]) .tab-icon-image ,.bookmark-item .toolbarbutton-icon{opacity: 0!important; transition: .15s !important; width: 0!important; padding-left: 16px!important}
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image,.bookmark-item:hover .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
+.tabbrowser-tab:not([hover]) .tab-icon-image,.bookmark-item:not([hover]) .toolbarbutton-icon{padding-left: 0!important}
+
+.tabbrowser-tab:not(:hover) .tab-close-button{opacity: 0% !important; transition: .3s !important; display: -moz-box !important;}
+.tab-close-button[selected]:not(:hover){opacity: 45% !important; transition: .3s !important; display: -moz-box !important;}
+.tabbrowser-tab:hover .tab-close-button{opacity: 50%; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button[selected]:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+
+
+
+

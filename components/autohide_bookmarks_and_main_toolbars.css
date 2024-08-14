@@ -21,7 +21,7 @@ See the above repository for updates as well as full license text. */
   background-repeat: repeat,var(--lwt-background-tiling);
   transform: rotateX(90deg);
   transform-origin: top;
-  transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;
+  transition: transform 100ms linear var(--uc-autohide-toolbar-delay) !important;
   z-index: 2;
 }
 
